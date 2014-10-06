@@ -1,0 +1,23 @@
+int rand = (int)(Math.random()*1000);
+int count = 0;
+println("Please try to guess the number. Start entering numbers!");
+boolean found = false;
+
+while(!found)
+{
+	int x = readInt();
+	count++;
+	if(x == rand)
+	{
+		found = true;
+		println("You've guessed it! It took you "+count+" attempts");
+	}
+	if(x<rand)
+	{
+		println("No! My number is higher!");
+	}
+	if(x>rand)
+	{
+		println("No! My number is lower!");
+	}
+}

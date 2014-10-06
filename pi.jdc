@@ -1,0 +1,11 @@
+println("Please enter an n for the estimation of pi");
+int n = readInt();
+int k = 0;
+double sum = 0;
+while(k<=n)
+{
+	sum += Math.pow(-1, k)/(2*k + 1);
+	k++;
+}
+sum *=4;
+println(sum);

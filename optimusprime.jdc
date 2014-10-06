@@ -1,0 +1,53 @@
+println("Please enter a Random Integer");
+int user = readInt();
+int i = 1;
+int uptry;
+int downtry;
+int j=2;
+int k=2;
+boolean upprime = true;
+boolean downprime = true;
+while(i<user)
+{
+	uptry = user + i;
+	downtry = user -i;
+	while(j<uptry)
+	{
+		if((uptry % j) == 0)
+		{
+			upprime = false;
+		}
+		j++;
+	}
+	j = 2;
+	while(j<downtry)
+	{
+		if((downtry % j) == 0)
+		{
+			downprime = false;
+		}
+		j++;
+	}
+	j= 2;
+	if(upprime && downprime)
+	{
+		println(uptry + " and " + downtry);
+		i = user;
+	}
+	else if(upprime)
+	{
+		println(uptry);
+		i = user;
+	}
+	else if(downprime)
+	{
+		println(downtry);
+		i = user;
+	}
+	else
+	{
+		i++;
+	}
+	upprime = true;
+	downprime = true;
+}

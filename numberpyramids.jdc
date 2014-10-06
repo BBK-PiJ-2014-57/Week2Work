@@ -1,0 +1,14 @@
+int i = 1;
+int j = 0;
+while(i<8)
+{
+println("");
+while(j<i)
+{
+	print(i);
+	j++;
+}
+i++;
+j=0;
+
+}
